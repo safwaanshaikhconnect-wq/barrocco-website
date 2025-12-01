@@ -1,0 +1,70 @@
+.menu-page {
+    padding: 120px 40px;
+    background: var(--light-bg);
+    min-height: 100vh;
+}
+
+.menu-page h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+    margin-top: 40px;
+}
+
+.menu-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.menu-card {
+    background: var(--white);
+    padding: 50px 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.menu-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-card p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .menu-page h2 {
+        font-size: 2.2rem;
+    }
+}
