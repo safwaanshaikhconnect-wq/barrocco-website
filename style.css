@@ -21,7 +21,6 @@ body {
 
 h1,
 h2,
-h3,
 h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
@@ -48,11 +47,13 @@ h4 {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
 }
 
 .tagline {
@@ -105,106 +106,6 @@ h4 {
     letter-spacing: 0.5px;
     max-width: 600px;
     margin: 0 auto;
-}
-
-/* Story Section */
-.story {
-    padding: 120px 40px;
-    background: var(--white);
-}
-
-.story-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-}
-
-.story-text h2 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 40px;
-    color: var(--primary-color);
-    letter-spacing: -1px;
-}
-
-.story-text p {
-    font-size: 1.1rem;
-    color: var(--text-gray);
-    margin-bottom: 25px;
-    line-height: 1.9;
-}
-
-.story-image {
-    width: 100%;
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 500px;
-    background: var(--light-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-}
-
-.image-placeholder span {
-    font-size: 8rem;
-    opacity: 0.3;
-}
-
-/* Menu Section */
-.menu {
-    padding: 120px 40px;
-    background: var(--light-bg);
-}
-
-.menu h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 80px;
-    color: var(--primary-color);
-    letter-spacing: -1px;
-}
-
-.menu-grid {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-
-.menu-card {
-    background: var(--white);
-    padding: 50px 40px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.menu-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.menu-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.menu-card p {
-    font-size: 0.95rem;
-    color: var(--text-gray);
-    line-height: 1.7;
 }
 
 /* Location Section */
@@ -299,15 +200,6 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .story-container {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .location-details {
         max-width: 1400px;
         margin: 0 auto;
@@ -329,19 +221,6 @@ footer p {
         font-size: 2.5rem;
     }
 
-    .story-text h2 {
-        font-size: 2.5rem;
-    }
-
-    .menu h2 {
-        font-size: 2.2rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
     .location-details {
         grid-template-columns: 1fr;
     }
@@ -351,7 +230,7 @@ footer p {
 .teaser-section {
     padding: 100px 40px;
     background: var(--white);
-    text-align: center;
+    /* Removed text-align: center; to allow left alignment in grid */
 }
 
 .teaser-section.bg-light {
@@ -359,8 +238,33 @@ footer p {
 }
 
 .teaser-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.teaser-content {
+    text-align: left;
+}
+
+.teaser-image {
+    width: 100%;
+    height: 400px;
+    background: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
 }
 
 .teaser-content h2 {
@@ -390,4 +294,15 @@ footer p {
 
 .btn-primary:hover {
     background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .teaser-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .teaser-content {
+        text-align: center;
+    }
 }
