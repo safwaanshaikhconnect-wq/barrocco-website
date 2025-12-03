@@ -1,6 +1,6 @@
 .story-page {
     padding: 120px 40px;
-    background: var(--white);
+    background: linear-gradient(to bottom, #c2b092 0%, #ffffff 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;

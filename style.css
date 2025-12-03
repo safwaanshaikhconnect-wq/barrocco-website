@@ -214,9 +214,9 @@ h4 {
     color: var(--accent-color);
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    background-color: #e8ddd0;
-    padding: 8px 16px;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 6px 14px;
+    border-radius: 999px;
     display: inline-block;
 }
 
