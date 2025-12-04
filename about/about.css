@@ -57,19 +57,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-<<<<<<< HEAD
     object-position: center 80%;
     border-radius: 8px;
     border: 3px solid #4b3a27;
     box-shadow: 0 4px 16px rgba(64, 48, 30, 0.4);
     transform: scale(1.1);
-=======
-    object-position: center 50%;
-    border-radius: 8px;
-    border: 3px solid #4b3a27;
-    box-shadow: 0 4px 16px rgba(64, 48, 30, 0.4);
-    transform: scale(1);
->>>>>>> 1d4a7dcae4e78a465998cc9e8cf365139e28a4c3
     transform-origin: center;
 }
 
